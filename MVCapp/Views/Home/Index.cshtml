@@ -1,6 +1,16 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+<div>
+    @{ 
+        foreach(var kontakt in ViewBag.Kontakty)
+        {
+            <p>
+                @kontakt.Imie,@kontakt.Nazwisko,@kontakt.Miasto,@kontakt.Ulica
+            </p>
+        }
+    }
+</div>
 
 <div class="jumbotron">
     <h1>ASP.NET</h1>
