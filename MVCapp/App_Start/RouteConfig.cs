@@ -16,6 +16,12 @@ namespace MVCapp
             routes.MapMvcAttributeRoutes();
 
             routes.MapRoute(
+               name: "Parametry",
+               url: "{par1}/{par2}/{par3}",
+               defaults: new { controller = "Home", action = "Parametry" }
+               );
+
+            routes.MapRoute(
                 name: "SamochodSzczegoly",
                 url: "Samochod-{id}",
                 defaults: new {controller = "Sklep", action = "Szczegoly" }

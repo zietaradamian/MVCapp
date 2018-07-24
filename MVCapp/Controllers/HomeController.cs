@@ -10,18 +10,28 @@ namespace MVCapp.Controllers
 {
     public class HomeController : Controller
     {
-        public string Index()
+        public ActionResult Index()
         {
             //var kontakty = new List<Kontakt> { new Kontakt { Imie = "adam" , Nazwisko="Nowak", Miasto="Katowice", Ulica="Andersa"},
             //new Kontakt { Imie = "Tomasz" , Nazwisko="Gromek", Miasto="Krakow", Ulica="Roweck"},
             //new Kontakt { Imie = "Jacek" , Nazwisko="Limpa", Miasto="Warszawa", Ulica="Pilsudcki"}
             //};
             //ViewBag.Kontakty = kontakty;
-            var wynik = RouteTable.Routes.GetVirtualPath(null, new RouteValueDictionary(new { Controller = "mojKontroler", Action = "MojaAkcja", id = "453", parametr = "marcin" }));
-            string s = wynik.VirtualPath;
-            return s;
-
+            //var wynik = RouteTable.Routes.GetVirtualPath(null, new RouteValueDictionary(new { Controller = "mojKontroler", Action = "MojaAkcja", id = "453", parametr = "marcin" }));
+            //string s = wynik.VirtualPath;
+            //return s;
+            return View();
         }
+        public ActionResult Parametry(int par1, int par2, string par3)
+        {
+            var test = (string.Format("par1: {0}, par2: {1}, par3: {2}", par1, par2, par3) );
+            return View();
+        }
+        public void Parametry2(Ksiazka a)
+        {
+            Response.Write(string.Format("Tytuł: {0}, Autor: {1}, Cena: {2}", a.Tytul, a.Autor, a.Cena));
+        }
+
 
         public ActionResult About()
         {
