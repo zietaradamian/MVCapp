@@ -1,0 +1,14 @@
+﻿@model List<MVCapp.Models.Kurs>
+
+<h1>Kursy</h1>
+
+<div>
+    <ul>
+        @foreach(var item in Model)
+        {
+            <li>
+                @item.Nazwa - @item.Opis
+            </li>
+        }
+    </ul>
+</div>
