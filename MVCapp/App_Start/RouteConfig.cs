@@ -40,6 +40,11 @@ namespace MVCapp
                 defaults: new { controller = "Kurs", action = "Index", id = UrlParameter.Optional }
             );
             routes.MapRoute(
+               name: "Pracownik",
+               url: "Pracownik/{action}/{id}",
+               defaults: new { controller = "Pracownik", action = "Index", id = UrlParameter.Optional }
+           );
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

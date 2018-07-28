@@ -20,5 +20,18 @@ namespace MVCapp.Controllers
             };
             return View(courses);
         }
+        [ChildActionOnly]
+        public ActionResult PobierzGodzinePartial()
+        {
+            var czas = DateTime.Now.ToLongTimeString();
+            return PartialView("PartialCzas",czas);
+        }
+        [ChildActionOnly]
+        public string PobierzGodzine()
+        {
+            return DateTime.Now.ToLongTimeString();
+            
+        }
+
     }
 }

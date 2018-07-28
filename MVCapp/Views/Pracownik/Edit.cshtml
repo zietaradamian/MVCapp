@@ -1,0 +1,26 @@
+﻿@model MVCapp.Models.Pracownik
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form action="/Pracownik/Edit" method="post">
+    <label for="PracownikId">Pracownik ID: </label>
+    <input type="text" name="PracownikId" id="PracownikId" />
+
+    <label for="Imie">Imie:  </label>
+    <input type="text" name="Imie" id="Imie" />
+
+    <label for="Nazwisko">Nazwisko:  </label>
+    <input type="text" name="Nazwisko" id="Nazwisko" />
+
+    <label for="Miasto">Miasto: </label>
+    <input type="text" name="Miasto" id="Miasto" />
+
+    <label for="Ulica">Ulica: </label>
+    <input type="text" name="Ulica" id="Ulica" />
+
+    <input type="submit" value="Wyślij" />
+</form>
