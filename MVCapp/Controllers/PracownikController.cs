@@ -31,7 +31,9 @@ namespace MVCapp.Controllers
         [HttpPost]
         public ActionResult Edit (FormCollection collection)
         {
-            return Content(string.Format("PracownikId {0} Imie: {1} Nazwisko {2} Miasto {3} Ulica {4}", collection["PracownikId"], collection["Imie"], collection["Nazwisko"], collection["Miasto"], collection["Ulica"]));
+            Pracownik pracownik = new Pracownik();
+            TryUpdateModel(pracownik);
+            return Content(string.Format("PracownikId {0} Imie: {1} Nazwisko {2} Miasto {3} Ulica {4}", pracownik.PracownikID, pracownik.Imie, pracownik.Nazwisko, pracownik.Miasto, pracownik.Ulica));
         }
     }
 }
