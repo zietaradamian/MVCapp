@@ -29,9 +29,9 @@ namespace MVCapp.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Edit(int PracownikId, string Imie, string Nazwisko, string Miasto, string Ulica)
+        public ActionResult Edit (int PracownikId,string Imie, string Nazwisko, string Miasto, string Ulica)
         {
-            return Content(string.Format("PracownikID: {0} Imie: {1} Nazwisko {2} Miasto {3} Ulica {4}",.PracownikID.Imie.Nazwisko.Miasto,Ulica));
+            return Content(string.Format("PracownikId {0} Imie: {1} Nazwisko {2} Miasto {3} Ulica {4}",PracownikId,Imie,Nazwisko,Miasto,Ulica));
         }
     }
 }
