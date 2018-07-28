@@ -150,6 +150,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KursController.cs" />
+    <Compile Include="Controllers\Pracownik2Controller.cs" />
     <Compile Include="Controllers\PracownikController.cs" />
     <Compile Include="Models\Ksiazka.cs" />
     <Compile Include="Controllers\SklepController.cs" />
@@ -159,6 +160,7 @@
     <Compile Include="Models\Kontakt.cs" />
     <Compile Include="Models\Kurs.cs" />
     <Compile Include="Models\Pracownik.cs" />
+    <Compile Include="Models\Pracownik2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -208,6 +210,7 @@
     <Content Include="Views\Shared\PartialCzas.cshtml" />
     <Content Include="Views\Pracownik\Index.cshtml" />
     <Content Include="Views\Pracownik\Edit.cshtml" />
+    <Content Include="Views\Pracownik2\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

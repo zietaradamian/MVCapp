@@ -33,7 +33,11 @@ namespace MVCapp
                 defaults: new { controller = "Sklep", action = "Lista" },
                 constraints: new { nazwa =@"[\w]+"}
                 );
-
+            routes.MapRoute(
+             name: "Pracownik2",
+             url: "Pracownik2/{action}/{id}",
+             defaults: new { controller = "Pracownik2", action = "Index", id = UrlParameter.Optional }
+         );
             routes.MapRoute(
                 name: "Kurs",
                 url: "Kurs/{action}/{id}",

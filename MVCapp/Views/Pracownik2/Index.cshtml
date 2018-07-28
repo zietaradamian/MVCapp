@@ -1,0 +1,13 @@
+﻿@model MVCapp.Models.Pracownik2
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("Index", "Pracownik2"))
+{
+    @Html.EditorFor(m=>m)
+    <input type="submit" value="Wyślij" />
+}
