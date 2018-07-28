@@ -5,8 +5,10 @@ using System.Web;
 
 namespace MVCapp.Models
 {
+    
     public class Pracownik
     {
+        
         public int PracownikID { get; set; }
         public string Imie { get; set; }
         public string Nazwisko { get; set; }

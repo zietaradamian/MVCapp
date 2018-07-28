@@ -23,17 +23,16 @@ namespace MVCapp.Controllers
             };
             return View(pracownik);
         }
-        
+        [HttpGet]
         public ActionResult Edit()
         {
             return View();
         }
         [HttpPost]
-        public ActionResult Edit (FormCollection collection)
+        public ActionResult Edit ([Bind(Exclude ="PracownikId")] Pracownik pracownik)
         {
-            Pracownik pracownik = new Pracownik();
-            TryUpdateModel(pracownik);
-            return Content(string.Format("PracownikId {0} Imie: {1} Nazwisko {2} Miasto {3} Ulica {4}", pracownik.PracownikID, pracownik.Imie, pracownik.Nazwisko, pracownik.Miasto, pracownik.Ulica));
+            return View();
         }
+       
     }
 }
