@@ -10,6 +10,11 @@ namespace MVCapp.Controllers
 {
     public class HomeController : Controller
     {
+        public ActionResult Przyklad()
+        {
+
+            return View();
+        }
         public ActionResult Index()
         {
             //var kontakty = new List<Kontakt> { new Kontakt { Imie = "adam" , Nazwisko="Nowak", Miasto="Katowice", Ulica="Andersa"},

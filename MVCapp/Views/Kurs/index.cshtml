@@ -7,7 +7,7 @@
         @foreach(var item in Model)
         {
             <li>
-                @item.Nazwa - @item.Opis
+               @Html.Partial("_CzastkowyModelKurs",item)
             </li>
         }
     </ul>

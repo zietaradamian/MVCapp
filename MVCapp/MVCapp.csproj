@@ -200,6 +200,9 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Parametry2.cshtml" />
     <Content Include="Views\Kurs\index.cshtml" />
+    <Content Include="Views\Home\Przyklad.cshtml" />
+    <Content Include="Views\Shared\_Czesciowy.cshtml" />
+    <Content Include="Views\Shared\_CzastkowyModelKurs.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
