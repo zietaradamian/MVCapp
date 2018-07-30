@@ -214,6 +214,7 @@
     <Content Include="Views\Pracownik\Edit.cshtml" />
     <Content Include="Views\Pracownik2\Index.cshtml" />
     <Content Include="Views\Date\Index.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Decimal.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
