@@ -3,6 +3,15 @@
     ViewBag.Title = "Index";
 }
 
+@helper Podswietlenie(string str)
+    {
+        <span style="background-color: yellow">
+            @str
+        </span>
+    }
 <h2>Index</h2>
 
 @Html.Image("aspLogo", "http://www.asp.net/images/ui/asplogo-new.png","ASP.NET Logo")
+
+
+@Podswietlenie("Tekst do podświetlenia")
