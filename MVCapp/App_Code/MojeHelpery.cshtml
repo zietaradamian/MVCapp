@@ -1,0 +1,20 @@
+﻿@helper Podswietlenie(string str)
+{
+    <span style="background-color: yellow">
+        @str
+    </span>
+}
+@helper Obliczenia(int x,int y, Func<int,int,int> oblicz)
+{
+    var wynik = oblicz(x, y);
+
+    if(wynik%2 ==0)
+    {
+        @Podswietlenie(wynik.ToString());
+
+    }
+    else
+    {
+        <span>@wynik</span>
+    }
+}

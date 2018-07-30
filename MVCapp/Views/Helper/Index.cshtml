@@ -4,14 +4,19 @@
 }
 
 @helper Podswietlenie(string str)
-    {
-        <span style="background-color: yellow">
-            @str
-        </span>
-    }
+{
+    <span style="background-color: yellow">
+        @str
+    </span>
+}
 <h2>Index</h2>
 
-@Html.Image("aspLogo", "http://www.asp.net/images/ui/asplogo-new.png","ASP.NET Logo")
+@Html.Image("aspLogo", "http://www.asp.net/images/ui/asplogo-new.png", "ASP.NET Logo")
 
 
 @Podswietlenie("Tekst do podświetlenia")
+
+@MojeHelpery.Podswietlenie("tekscik do podświetlenia globalnie")
+
+@MojeHelpery.Obliczenia(2, 4, (x, y) => x + y)
+@MojeHelpery.Obliczenia(3, 3, (x, y) => x * y)
