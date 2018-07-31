@@ -156,13 +156,16 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CodeFirstController.cs" />
     <Compile Include="Controllers\DateController.cs" />
     <Compile Include="Controllers\HelperController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KursController.cs" />
     <Compile Include="Controllers\Pracownik2Controller.cs" />
     <Compile Include="Controllers\PracownikController.cs" />
+    <Compile Include="DAL\CodeFirstContext.cs" />
     <Compile Include="Helpers\ImageHelper.cs" />
+    <Compile Include="Models\CodeFirst.cs" />
     <Compile Include="Models\Date.cs" />
     <Compile Include="Models\Kontakty.cs">
       <DependentUpon>KontaktyModel.tt</DependentUpon>
@@ -267,6 +270,7 @@
     <Content Include="Views\Date\Index.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\Decimal.cshtml" />
     <Content Include="Views\Helper\Index.cshtml" />
+    <Content Include="Views\CodeFirst\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Sklep\" />

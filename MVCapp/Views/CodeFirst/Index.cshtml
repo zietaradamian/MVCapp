@@ -1,0 +1,14 @@
+﻿@model MVCapp.Models.CodeFirst
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div>
+    @using (Html.BeginForm("DodajKontakt", "CodeFirst"))
+    {
+        @Html.EditorFor(a => a)
+        <input type="submit" value="Wyslij" />
+    }
+</div>

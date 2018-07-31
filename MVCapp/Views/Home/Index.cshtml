@@ -1,4 +1,7 @@
-﻿@{
+﻿@model MVCapp.Models.Kontakty
+
+
+@{
     ViewBag.Title = "Home Page";
 }
 @*@*<div>
@@ -11,6 +14,11 @@
         }
     }
 </div>*@
+
+@Model.Imie
+<br />
+
+@Model.Nazwisko
 <form action="/Home/ParametrsBindingToClass0" method="post">
     <label for="albumTitle">Tytuł:</label>
     <input type="text" name="Tytuł" id="Tytul" />

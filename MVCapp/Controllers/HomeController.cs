@@ -25,7 +25,10 @@ namespace MVCapp.Controllers
             //var wynik = RouteTable.Routes.GetVirtualPath(null, new RouteValueDictionary(new { Controller = "mojKontroler", Action = "MojaAkcja", id = "453", parametr = "marcin" }));
             //string s = wynik.VirtualPath;
             //return s;
-            return View();
+            KontaktyModelContainer db = new KontaktyModelContainer();
+            var kontakty = db.KontaktySet.FirstOrDefault();
+
+            return View(kontakty);
         }
         public ActionResult Parametry(int par1, int par2, string par3)
         {
