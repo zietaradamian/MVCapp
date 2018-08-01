@@ -165,6 +165,19 @@
     <Compile Include="Controllers\PracownikController.cs" />
     <Compile Include="DAL\CodeFirstContext.cs" />
     <Compile Include="Helpers\ImageHelper.cs" />
+    <Compile Include="Migrations\201808011237315_InitialCreate.cs" />
+    <Compile Include="Migrations\201808011237315_InitialCreate.Designer.cs">
+      <DependentUpon>201808011237315_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808011245506_dodaniePola.cs" />
+    <Compile Include="Migrations\201808011245506_dodaniePola.Designer.cs">
+      <DependentUpon>201808011245506_dodaniePola.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808011250480_nowatabelaPytanie.cs" />
+    <Compile Include="Migrations\201808011250480_nowatabelaPytanie.Designer.cs">
+      <DependentUpon>201808011250480_nowatabelaPytanie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CodeFirst.cs" />
     <Compile Include="Models\Date.cs" />
     <Compile Include="Models\Kontakty.cs">
@@ -194,6 +207,7 @@
     <Compile Include="Models\Kurs.cs" />
     <Compile Include="Models\Pracownik.cs" />
     <Compile Include="Models\Pracownik2.cs" />
+    <Compile Include="Models\Pytanie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -290,6 +304,17 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201808011237315_InitialCreate.resx">
+      <DependentUpon>201808011237315_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808011245506_dodaniePola.resx">
+      <DependentUpon>201808011245506_dodaniePola.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808011250480_nowatabelaPytanie.resx">
+      <DependentUpon>201808011250480_nowatabelaPytanie.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

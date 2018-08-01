@@ -14,5 +14,6 @@ namespace MVCapp.DAL
         public CodeFirstContext() : base("CodeFirstConnectionString") { }
 
         public DbSet<CodeFirst> Kontakty { get; set; }
+        public DbSet<Pytanie> Pytania { get; set; }
     }
 }
