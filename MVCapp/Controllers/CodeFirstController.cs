@@ -16,7 +16,7 @@ namespace MVCapp.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult DodajKontakty(CodeFirst codeFirst)
+        public ActionResult DodajKontakt(CodeFirst codeFirst)
         {
             if(!ModelState.IsValid)
             {
