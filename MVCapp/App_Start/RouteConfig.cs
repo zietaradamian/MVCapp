@@ -34,6 +34,8 @@ namespace MVCapp
                 constraints: new { nazwa =@"[\w]+"}
                 );
 
+   
+    
             routes.MapRoute(
            name: "CodeFirst",
            url: "CodeFirst/{action}/{id}",
