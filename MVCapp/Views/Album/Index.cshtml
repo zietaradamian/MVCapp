@@ -1,0 +1,38 @@
+﻿@model MVCapp.Models.Album
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Ajax.BeginForm(new AjaxOptions()
+{
+    
+    HttpMethod = "post",
+    OnSuccess = "Update"
+
+}))
+
+{
+    @Html.EditorFor(a => a)
+    <input type="submit" value="Wyslij" />
+}
+
+<div id="formResult"></div>
+
+
+<script src="~/Scripts/mustache.js"></script>
+
+<script id="albumTmpl" type="text/template">
+    <h1>{{Tytul}}</h1>
+    <h2>Autor: {{Autor}}</h2>
+    <p>Cena: {{Cena}}</p>
+</script>
+
+<script>
+    function Update(result) {
+        var tempalt = $('#albumTmpl').html();
+        var html = Mustache.to_html(tempalt, result);
+        $('#formResult').html(html);
+    }
+</script>
