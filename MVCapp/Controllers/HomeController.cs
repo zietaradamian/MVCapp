@@ -54,5 +54,22 @@ namespace MVCapp.Controllers
 
             return View();
         }
+        public ActionResult Formularz()
+        {
+            
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Post(string parametr)
+        {
+            TempData["Parametr"] = parametr;
+            return RedirectToAction("PRG");
+        }
+
+        public ActionResult PRG()
+        {
+            ViewBag.Parametr = TempData["Parametr"];
+            return View();
+        }
     }
 }

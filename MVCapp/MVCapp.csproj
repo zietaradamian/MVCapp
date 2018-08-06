@@ -344,6 +344,8 @@
     <Content Include="Views\Album\Index.cshtml" />
     <Content Include="Views\Osoba\Index.cshtml" />
     <Content Include="Views\Osoba\_ListaOsob.cshtml" />
+    <Content Include="Views\Home\Formularz.cshtml" />
+    <Content Include="Views\Home\PRG.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Sklep\" />

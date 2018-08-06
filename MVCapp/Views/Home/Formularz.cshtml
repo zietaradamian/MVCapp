@@ -1,0 +1,25 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Formularz</title>
+</head>
+<body>
+    <div> 
+        @using (Html.BeginForm("Post", "Home"))
+        {
+            <div>Wypełnij Formularz</div>
+            <div>
+                <input type="text" name="parametr" />
+                <input type="submit" name="Wyslij" />
+            </div>
+        }
+    </div>
+</body>
+</html>
