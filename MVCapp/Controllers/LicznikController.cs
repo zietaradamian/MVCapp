@@ -28,9 +28,37 @@ namespace MVCapp.Controllers
 
         }
 
+     
+
+        [HttpPost]
+        public ActionResult LicznikApplication()
+        {
+            HttpContext.Application.Lock();
+                var licznik = PobierzLicznik();
+                licznik.LicznikApplication++;
+                UstawLicznik(licznik);
+            HttpContext.Application.UnLock();
+           
+            return RedirectToAction("Index");
+
+        }
+
+        private void UstawLicznik(Liczniki licznik)
+        {
+            HttpContext.Application["Licznik"] = licznik.LicznikApplication;
+        }
+
         private Liczniki PobierzLicznik()
         {
             var licznik = new Liczniki();
+
+            //Application
+            if (HttpContext.Application["Licznik"] != null)
+            {
+                licznik.LicznikApplication = (int)HttpContext.Application["licznik"];
+            }
+            else
+                licznik.LicznikApplication = 0;
             return licznik;
         }
     }

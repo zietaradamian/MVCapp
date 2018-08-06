@@ -11,7 +11,7 @@
     <title>Index</title>
 </head>
 <body>
-    <div> 
+    <div>
         @using (Html.BeginForm("LicznikStatyczny", "Licznik"))
         {
             <div>
@@ -21,5 +21,16 @@
             </div>
         }
     </div>
+    <div>
+        @using (Html.BeginForm("LicznikApplication", "Licznik"))
+        {
+            <div>
+                Licznik Kliknieć (zmienna Application)
+                <input type="submit" value="Inkrementuj" />
+                <div>@Model.LicznikApplication</div>
+            </div>
+        }
+    </div>
+
 </body>
 </html>

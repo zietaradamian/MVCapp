@@ -17,5 +17,6 @@ namespace MVCapp.Models
                 Liczniki._licznikstatyczny = value;
             }
         }
+        public int LicznikApplication { get; set; }
     }
 }
