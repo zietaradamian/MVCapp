@@ -1,0 +1,25 @@
+﻿@model MVCapp.Models.Liczniki
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        @using (Html.BeginForm("LicznikStatyczny", "Licznik"))
+        {
+            <div>
+                Licznik Kliknieć (zmienna statyczna)
+                <input type="submit" value="Inkrementuj" />
+                <div>@Model.LicznikStatyczny</div>
+            </div>
+        }
+    </div>
+</body>
+</html>

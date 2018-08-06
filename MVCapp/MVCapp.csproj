@@ -163,6 +163,7 @@
     <Compile Include="Controllers\HelperController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KursController.cs" />
+    <Compile Include="Controllers\LicznikController.cs" />
     <Compile Include="Controllers\OsobaController.cs" />
     <Compile Include="Controllers\Pracownik2Controller.cs" />
     <Compile Include="Controllers\PracownikController.cs" />
@@ -209,6 +210,7 @@
     </Compile>
     <Compile Include="Models\Kontakt.cs" />
     <Compile Include="Models\Kurs.cs" />
+    <Compile Include="Models\Liczniki.cs" />
     <Compile Include="Models\Osoba.cs" />
     <Compile Include="Models\Pracownik.cs" />
     <Compile Include="Models\Pracownik2.cs" />
@@ -346,6 +348,7 @@
     <Content Include="Views\Osoba\_ListaOsob.cshtml" />
     <Content Include="Views\Home\Formularz.cshtml" />
     <Content Include="Views\Home\PRG.cshtml" />
+    <Content Include="Views\Licznik\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Sklep\" />
