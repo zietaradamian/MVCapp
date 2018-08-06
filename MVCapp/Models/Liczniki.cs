@@ -19,5 +19,6 @@ namespace MVCapp.Models
         }
         public int LicznikApplication { get; set; }
         public int LicznikSesji { get; set; }
+        public int LicznikCiasteczka { get; set; }
     }
 }

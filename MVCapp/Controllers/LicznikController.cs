@@ -54,11 +54,26 @@ namespace MVCapp.Controllers
             return RedirectToAction("Index");
 
         }
+        [HttpPost]
+        public ActionResult LicznikCiasteczka()
+        {
+
+            var licznik = PobierzLicznik();
+            licznik.LicznikCiasteczka++;
+            UstawLicznik(licznik);
+
+
+            return RedirectToAction("Index");
+
+        }
 
         private void UstawLicznik(Liczniki licznik)
         {
             HttpContext.Application["Licznik"] = licznik.LicznikApplication;
             Session["licznik"] = licznik.LicznikSesji;
+            HttpCookie ciasteczko = new HttpCookie("licznik", licznik.LicznikCiasteczka.ToString());
+            ciasteczko.Expires = DateTime.Now.AddDays(5);
+            Response.SetCookie(ciasteczko);
         }
 
         private Liczniki PobierzLicznik()
@@ -80,6 +95,14 @@ namespace MVCapp.Controllers
                 licznik.LicznikSesji = (int)Session["licznik"];
             else
                 licznik.LicznikSesji = 0;
+
+            //Ciasteczka
+
+            if (Request.Cookies["licznik"] != null)
+                licznik.LicznikCiasteczka = int.Parse(Request.Cookies["licznik"].Value);
+            else
+                licznik.LicznikCiasteczka = 0;
+
 
             return licznik;
         }
