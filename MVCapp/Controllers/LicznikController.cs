@@ -11,7 +11,8 @@ namespace MVCapp.Controllers
     {
         private object licznikStatycznyBlokada = new object();
         // GET: Licznik
-        public ActionResult Index()
+        [OutputCache(Duration =30, VaryByParam = "id")]
+        public ActionResult Index(int id = 1)
         {
             var licznik = PobierzLicznik();
             return View(licznik);
