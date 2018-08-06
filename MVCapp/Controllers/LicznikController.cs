@@ -42,10 +42,23 @@ namespace MVCapp.Controllers
             return RedirectToAction("Index");
 
         }
+        [HttpPost]
+        public ActionResult LicznikSesji()
+        {
+         
+            var licznik = PobierzLicznik();
+            licznik.LicznikSesji++;
+            UstawLicznik(licznik);
+            
+
+            return RedirectToAction("Index");
+
+        }
 
         private void UstawLicznik(Liczniki licznik)
         {
             HttpContext.Application["Licznik"] = licznik.LicznikApplication;
+            Session["licznik"] = licznik.LicznikSesji;
         }
 
         private Liczniki PobierzLicznik()
@@ -59,6 +72,15 @@ namespace MVCapp.Controllers
             }
             else
                 licznik.LicznikApplication = 0;
+            
+
+            //Sesja
+
+            if (Session["licznik"] != null)
+                licznik.LicznikSesji = (int)Session["licznik"];
+            else
+                licznik.LicznikSesji = 0;
+
             return licznik;
         }
     }

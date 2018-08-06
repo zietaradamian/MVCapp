@@ -31,6 +31,17 @@
             </div>
         }
     </div>
+    <div>
+        @using (Html.BeginForm("LicznikSesji", "Licznik"))
+        {
+            <div>
+                Licznik Kliknieć (zmienna Sesji)
+                <input type="submit" value="Inkrementuj" />
+                <div>@Model.LicznikSesji</div>
+            </div>
+        }
+    </div>
+
 
 </body>
 </html>
