@@ -53,6 +53,16 @@
         }
     </div>
 
+    <div>
+        @using (Html.BeginForm("LicznikCache", "Licznik"))
+        {
+            <div>
+                Licznik Kliknieć (zmienna Cache)
+                <input type="submit" value="Inkrementuj" />
+                <div>@Model.LicznikCache</div>
+            </div>
+        }
+    </div>
 
 </body>
 </html>

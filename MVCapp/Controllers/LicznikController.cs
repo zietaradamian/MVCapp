@@ -67,6 +67,19 @@ namespace MVCapp.Controllers
 
         }
 
+        [HttpPost]
+        public ActionResult LicznikCache()
+        {
+
+            var licznik = PobierzLicznik();
+            licznik.LicznikCache++;
+            UstawLicznik(licznik);
+
+
+            return RedirectToAction("Index");
+
+        }
+
         private void UstawLicznik(Liczniki licznik)
         {
             HttpContext.Application["Licznik"] = licznik.LicznikApplication;
@@ -74,6 +87,9 @@ namespace MVCapp.Controllers
             HttpCookie ciasteczko = new HttpCookie("licznik", licznik.LicznikCiasteczka.ToString());
             ciasteczko.Expires = DateTime.Now.AddDays(5);
             Response.SetCookie(ciasteczko);
+            //HttpRuntime.Cache["licznik"] = licznik.LicznikCache;
+            HttpRuntime.Cache.Add("licznik", licznik.LicznikCache, null, DateTime.Now.AddSeconds(4), TimeSpan.Zero, System.Web.Caching.CacheItemPriority.Default, null);
+
         }
 
         private Liczniki PobierzLicznik()
@@ -104,6 +120,15 @@ namespace MVCapp.Controllers
                 licznik.LicznikCiasteczka = 0;
 
 
+            //Cache
+
+            if (HttpRuntime.Cache["licznik"] != null)
+                licznik.LicznikCache = (int)HttpRuntime.Cache["licznik"];
+            else
+                licznik.LicznikCache = 0;
+
+            
+            
             return licznik;
         }
     }
