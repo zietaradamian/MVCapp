@@ -12,6 +12,7 @@
 </head>
 <body>
     <div>Mamy godzine: @DateTime.Now.ToLongTimeString()</div>
+    @Html.Action("PobierzCzas", true)
     <div>
         @using (Html.BeginForm("LicznikStatyczny", "Licznik"))
         {

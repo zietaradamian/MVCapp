@@ -1,4 +1,5 @@
-﻿using MVCapp.Models;
+﻿using DevTrends.MvcDonutCaching;
+using MVCapp.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,12 @@ namespace MVCapp.Controllers
     {
         private object licznikStatycznyBlokada = new object();
         // GET: Licznik
-        [OutputCache(Duration =30, VaryByParam = "id")]
+        [ChildActionOnly]
+        public string PobierzCzas()
+        {
+            return DateTime.Now.ToLongTimeString();
+        }
+        [DonutOutputCache(Duration =6, VaryByParam = "id")]
         public ActionResult Index(int id = 1)
         {
             var licznik = PobierzLicznik();
